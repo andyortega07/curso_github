@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tarjeta Personal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Andy Ortega — Tarjeta</title>
+    <style>
+        body{font-family:Arial,Helvetica,sans-serif;max-width:720px;margin:24px auto;padding:16px;line-height:1.5}
+        header{display:flex;gap:16px;align-items:center}
+        img{width:96px;height:96px;border-radius:8px;object-fit:cover}
+        h1{margin:0;font-size:1.5rem}
+        .skills ul{columns:2;padding-left:1rem}
+        a.contact{color:#0645AD;text-decoration:none}
+        footer{margin-top:20px;font-size:0.9rem;color:#555}
+    </style>
 </head>
 <body>
+    <header>
+        <img src="https://unirfp.unir.net/wp-content/uploads/sites/23/2023/07/desarrollador.jpg" alt="Foto de desarrollador">
+        <div>
+            <h1>Andy Ortega</h1>
+            <p>Estudiante de Desarrollo de Software — Apasionado por aplicaciones móviles</p>
+            <p><a class="contact" href="mailto:afortega@sudamericano.edu.ec">afortega@sudamericano.edu.ec</a></p>
+        </div>
+    </header>
 
-    <h1>Andy Ortega</h1>
+    <main>
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>JavaScript / TypeScript</li>
+                <li>Diseño de interfaces</li>
+                <li>Flutter / React Native (aprendizaje)</li>
+            </ul>
+        </section>
 
+        <section>
+            <h2>Proyectos y objetivo</h2>
+            <p>Construyendo apps personales para consolidar un portafolio que me permita optar a roles internacionales en mobile development.</p>
+        </section>
+    </main>
 
-    <h2>Estudiante de Desarrollo de Software</h2>
-
-    <p>
-        Me interesa la programación, el diseño web y el desarrollo de aplicaciones.
-    </p>
-
-    <h3>Mis habilidades</h3>
-
-    <ul>
-        <li>HTML</li>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>Diseño de interfaces</li>
-    </ul>
-
-    <h3>Contacto</h3>
-
-    <p>Correo: afortega@sudamericano.edu.ec</p>
-
+    <footer>
+        <p>LinkedIn: — | GitHub: —</p>
+    </footer>
 </body>
 </html>
