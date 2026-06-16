@@ -1,48 +1,202 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Andy Ortega — Tarjeta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tarjeta de presentación de Andy Ortega, estudiante de desarrollo de software con enfoque en aplicaciones móviles." />
+    <title>Andy Ortega — Tarjeta de presentación</title>
     <style>
-        body{font-family:Arial,Helvetica,sans-serif;max-width:720px;margin:24px auto;padding:16px;line-height:1.5}
-        header{display:flex;gap:16px;align-items:center}
-        img{width:96px;height:96px;border-radius:8px;object-fit:cover}
-        h1{margin:0;font-size:1.5rem}
-        .skills ul{columns:2;padding-left:1rem}
-        a.contact{color:#0645AD;text-decoration:none}
-        footer{margin-top:20px;font-size:0.9rem;color:#555}
+        :root {
+            color-scheme: light;
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            color: #1d1f21;
+            background: #f5f7fb;
+            --surface: #ffffff;
+            --surface-strong: #eef2f7;
+            --border: #d7dde7;
+            --accent: #1f6feb;
+            --text-muted: #565d66;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 24px 16px;
+            line-height: 1.6;
+            background: radial-gradient(circle at top, #eef5ff 0%, transparent 40%), #f5f7fb;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 24px;
+            background: var(--surface);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 24px 40px rgba(23, 43, 77, 0.08);
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .photo {
+            width: 96px;
+            height: 96px;
+            border-radius: 18px;
+            object-fit: cover;
+            background: #dbe6f2;
+            flex-shrink: 0;
+        }
+
+        h1 {
+            margin: 0 0 6px;
+            font-size: clamp(1.7rem, 2.2vw, 2.2rem);
+        }
+
+        .subtitle {
+            margin: 0 0 10px;
+            color: var(--text-muted);
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 6px;
+        }
+
+        .contact-list a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-list a:hover,
+        .contact-list a:focus {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 22px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 18px;
+            background: var(--surface-strong);
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .skills ul {
+            columns: 2;
+            gap: 0.75rem;
+            padding-left: 1rem;
+            margin: 0;
+        }
+
+        .skills li {
+            margin-bottom: 0.55rem;
+        }
+
+        .recommendations {
+            display: grid;
+            gap: 10px;
+            padding-left: 1rem;
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        footer {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 14px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        @media (max-width: 520px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .contact-list {
+                justify-items: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://unirfp.unir.net/wp-content/uploads/sites/23/2023/07/desarrollador.jpg" alt="Foto de desarrollador">
-        <div>
-            <h1>Andy Ortega</h1>
-            <p>Estudiante de Desarrollo de Software — Apasionado por aplicaciones móviles</p>
-            <p><a class="contact" href="mailto:afortega@sudamericano.edu.ec">afortega@sudamericano.edu.ec</a></p>
-        </div>
-    </header>
+    <article class="page">
+        <header>
+            <img class="photo" src="https://unirfp.unir.net/wp-content/uploads/sites/23/2023/07/desarrollador.jpg" alt="Foto de desarrollador" />
+            <div>
+                <h1>Andy Ortega</h1>
+                <p class="subtitle">Estudiante de Desarrollo de Software | Apasionado por apps móviles.</p>
+                <address>
+                    <ul class="contact-list">
+                        <li><a href="mailto:afortega@sudamericano.edu.ec">afortega@sudamericano.edu.ec</a></li>
+                        <li><a href="#" aria-label="Perfil de LinkedIn de Andy Ortega">LinkedIn</a></li>
+                        <li><a href="#" aria-label="Perfil de GitHub de Andy Ortega">GitHub</a></li>
+                    </ul>
+                </address>
+            </div>
+        </header>
 
-    <main>
-        <section class="skills">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML</li>
-                <li>JavaScript / TypeScript</li>
-                <li>Diseño de interfaces</li>
-                <li>Flutter / React Native (aprendizaje)</li>
-            </ul>
-        </section>
+        <main>
+            <section class="card skills">
+                <h2>Habilidades clave</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>JavaScript / TypeScript</li>
+                    <li>Diseño de interfaces</li>
+                    <li>Flutter / React Native (aprendizaje)</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Proyectos y objetivo</h2>
-            <p>Construyendo apps personales para consolidar un portafolio que me permita optar a roles internacionales en mobile development.</p>
-        </section>
-    </main>
+            <section class="card">
+                <h2>Proyectos y objetivo</h2>
+                <p>Construyendo apps personales para consolidar un portafolio que me permita optar a roles internacionales en mobile development.</p>
+            </section>
 
-    <footer>
-        <p>LinkedIn: — | GitHub: —</p>
-    </footer>
+            <section class="card">
+                <h2>Recomendaciones</h2>
+                <ol class="recommendations">
+                    <li>Actualiza los enlaces de LinkedIn y GitHub con tus perfiles activos.</li>
+                    <li>Incluye 2-3 proyectos destacados con descripciones breves y enlaces.</li>
+                    <li>Usa una foto personal real para mejorar la confianza del reclutador.</li>
+                    <li>Agrega un objetivo profesional corto y claro en inglés y español.</li>
+                </ol>
+            </section>
+        </main>
+
+        <footer>
+            <div class="links">
+                <span>LinkedIn: —</span>
+                <span>GitHub: —</span>
+            </div>
+            <p>Consejo: la página funciona mejor cuando incluyes ejemplo de proyectos y URLs reales.</p>
+        </footer>
+    </article>
 </body>
 </html>
