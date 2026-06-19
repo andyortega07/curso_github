@@ -5,7 +5,7 @@
 | Dato | Descripción |
 |------|-------------|
 | Repositorio principal | `codigo_11` |
-| Fecha | 17/M06/2026 |
+| Fecha | 17/06/2026 |
 | Objetivo | Practicar el uso de repositorios, *issues*, colaboración, *forks* y gestión de proyectos con Kanban. |
 
 ---
